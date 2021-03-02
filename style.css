@@ -103,7 +103,7 @@ button:hover{
 header{
   background: #1d3583; /*#2d4a22;*/
   padding: 2rem 0 13rem;
-  text-align: center;
+  text-align: center; 
 }
 
 #logo{
@@ -212,6 +212,10 @@ td.expense{
   color: #e92929;
 }
 
+.minus{
+  cursor: pointer;
+}
+
 
 /*==== Modal ====*/
 .modal-overlay{
@@ -267,7 +271,7 @@ input{
   margin: .7rem;
 }
 
-.input-group small{
+.input-group .help{
   opacity: .7;
 }
 

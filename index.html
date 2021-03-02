@@ -30,7 +30,7 @@
           <img src="./assets/income.svg" alt="Imagem de entrada">
         </h3>
 
-        <p>R$ 5.000,00</p>
+        <p id="incomeDisplay">R$ 0,00</p>
 			</div>
 
 			<div class="card">
@@ -39,7 +39,7 @@
           <img src="./assets/expense.svg" alt="Imagem de saída de valor">  
         </h3>
         
-				<p>R$ 2.000,00</p>
+				<p id="expenseDisplay">R$ 0,00</p>
 			</div>
 
 			<div class="card total">
@@ -48,17 +48,17 @@
           <img src="./assets/total.svg" alt="Imagem do total">
         </h3>
        
-				<p>R$ 3.000,00</p>
+				<p id="totalDisplay">R$ 0,00</p>
 			</div>
 
 		</section>
 
-     <a href="#" onclick="Modal.open()" class="button new">+ Nova Transação</a>
+     
 
 		<section id="transaction">
 			<h2 class="sr-only">Transações</h2>
      
-
+      <a href="#" onclick="Modal.open()" class="button new">+ Nova Transação</a>
 			<table id="data-table">
 
 				<thead>
@@ -71,34 +71,6 @@
 				</thead>
 
 				<tbody>
-
-					<tr>
-            <td>
-              <img src="./assets/minus.svg" alt="Remover transação">
-            </td>
-						<td class="description">Luz</td>
-						<td class="expense">- R$ 500,00</td>
-						<td class="date">23/01/2021</td>
-					</tr>
-
-					<tr>
-            <td>
-              <img src="./assets/minus.svg" alt="Remover transação">
-            </td>
-						<td class="description">Criação website</td>
-						<td class="income">R$ 1.500,00</td>
-						<td class="date">25/02/2021</td>
-					</tr>
-
-					<tr>
-            <td>
-              <img src="./assets/minus.svg" alt="Remover transação">
-            </td>
-						<td class="description">Internet</td>
-						<td class="expense">- R$ 49,00</td>
-						<td class="date">10/02/2021</td>
-					</tr>
-
 				</tbody>
 			</table>
 		</section>
@@ -106,15 +78,15 @@
 	</main>
 
 
- <div class="modal-overlay active">
+ <div class="modal-overlay">
     <div class="modal">
       <div id="form">
         <h2>Nova Transação</h2>
 
-        <form action="">
+        <form action="" onsubmit="Form.submit(event)">
           <div class="input-group">
             <label class="sr-only" for="description">Descrição</label>
-        <input type="text" name="description" id="description" placeholder="Descrição">
+            <input type="text" name="description" id="description" placeholder="Descrição">
           </div>
 
           <div class="input-group">
